@@ -1,0 +1,254 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve - Reabilitação Neurofuncional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+        /* Classe para rolagem suave ao clicar nos links de navegação */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Estilo para ícones SVG */
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        .form-message {
+            @apply mt-4 p-3 rounded-lg text-sm text-center;
+        }
+        .form-success {
+            @apply bg-green-100 text-green-700;
+        }
+        .form-error {
+            @apply bg-red-100 text-red-700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho (Header) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Evolve</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">Sobre Nós</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Tratamentos</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <!-- Hamburger Menu Icon -->
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Mobile -->
+        <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-50 transition-colors border-b border-gray-100">Sobre Nós</a>
+            <a href="#services" class="block py-2 px-4 text-gray-600 hover:bg-gray-50 transition-colors border-b border-gray-100">Tratamentos</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-50 transition-colors">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Hero - Destaque -->
+        <section class="bg-blue-600 text-white py-20 md:py-32 rounded-b-3xl shadow-lg">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+                    Evolve: Sua jornada de reabilitação começa aqui.
+                </h1>
+                <p class="text-lg md:text-xl font-light mb-8 max-w-2xl mx-auto">
+                    Transformamos vidas através de uma reabilitação neurofuncional focada em resultados e no bem-estar integral.
+                </p>
+                <a href="#contact" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition-all transform hover:scale-105">
+                    Agende sua Avaliação
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Nós -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Sobre Nós</h2>
+                        <p class="mb-6 text-gray-600 leading-relaxed">
+                            Na **Evolve**, acreditamos no potencial de cada indivíduo para se reconectar com suas habilidades e viver com mais autonomia. Somos uma clínica de reabilitação neurofuncional especializada, dedicada a guiar nossos pacientes em cada etapa da jornada de recuperação.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Nossa Equipe Multidisciplinar</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            O sucesso da reabilitação vem de um esforço conjunto. Nossa equipe é composta por profissionais altamente qualificados e dedicados, trabalhando em sintonia para oferecer um tratamento completo e integrado, valorizando sempre o cuidado humanizado.
+                        </p>
+                    </div>
+                    <div class="hidden md:block">
+                        <!-- Imagem placeholder que pode ser substituída -->
+                        <div class="bg-gray-200 rounded-2xl h-64 w-full flex items-center justify-center text-gray-500">
+                             <span class="text-lg">Imagem de uma equipe em ação</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Tratamentos -->
+        <section id="services" class="bg-gray-100 py-20 rounded-t-3xl shadow-inner">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Nossos Tratamentos</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item de Tratamento: Bobath Adulto -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Conceito Bobath (Adulto)</h3>
+                        <p class="text-gray-600">Abordagem terapêutica para o manejo de indivíduos com disfunções do movimento e postura devido a lesões do sistema nervoso central.</p>
+                    </div>
+                    <!-- Item de Tratamento: Bobath Infantil -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Conceito Bobath (Infantil)</h3>
+                        <p class="text-gray-600">Focado em crianças, esta abordagem auxilia na otimização do desenvolvimento motor e funcional.</p>
+                    </div>
+                    <!-- Item de Tratamento: PNF -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">PNF</h3>
+                        <p class="text-gray-600">Utiliza padrões de movimento para facilitar e melhorar o controle muscular e a coordenação, especialmente em quadros neurológicos.</p>
+                    </div>
+                    <!-- Item de Tratamento: PediaSuit -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">PediaSuit</h3>
+                        <p class="text-gray-600">Um colete terapêutico que fornece suporte e alinhamento, melhorando o movimento e a força em crianças.</p>
+                    </div>
+                    <!-- Item de Tratamento: TCI -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Terapia de Contenção Induzida</h3>
+                        <p class="text-gray-600">Método que restringe o membro não afetado para encorajar o uso do membro afetado, promovendo a neuroplasticidade.</p>
+                    </div>
+                    <!-- Item de Tratamento: TEA -->
+                    <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">TEA</h3>
+                        <p class="text-gray-600">Abordagens personalizadas para auxiliar no desenvolvimento de habilidades em indivíduos com Transtorno do Espectro Autista.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Fale Conosco</h2>
+                        <p class="text-gray-600 mb-8">
+                            Estamos prontos para conversar sobre como podemos ajudar. Entre em contato para agendar uma avaliação e dar o próximo passo em sua reabilitação.
+                        </p>
+                        <div class="space-y-4 text-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <!-- Ícone de Localização -->
+                                <svg class="icon text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <p>Rua Mariante, 284, sala 307 - CEP 90430-180</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <!-- Ícone de Telefone -->
+                                <svg class="icon text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.5 2.13l-1.9 1.9a15 15 0 0 0 6.14 6.14l1.9-1.9a2 2 0 0 1 2.13-.5 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <p>(51) 98421-5779</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <!-- Ícone de E-mail -->
+                                <svg class="icon text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <p>evolveneurofuncional@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Formulário de Contato -->
+                    <div class="bg-gray-100 p-8 rounded-2xl shadow-md border border-gray-200">
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Seu Nome</label>
+                                <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Seu E-mail</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Sua Mensagem</label>
+                                <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-3"></textarea>
+                            </div>
+                            <div id="form-message-box"></div>
+                            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-full hover:bg-blue-700 transition-colors transform hover:scale-105">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-gray-900 text-gray-300 py-12 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <div class="space-y-2 mb-4">
+                <p>Evolve - Reabilitação Neurofuncional</p>
+                <p>Rua Mariante, 284, sala 307 - CEP 90430-180</p>
+                <p>Tel: (51) 98421-5779 | E-mail: evolveneurofuncional@gmail.com</p>
+            </div>
+            <p class="text-sm text-gray-500">&copy; 2025 Evolve. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica do menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Lógica para esconder o menu mobile ao clicar em um link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lógica para o formulário de contato
+        const form = document.getElementById('contact-form');
+        const messageBox = document.getElementById('form-message-box');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+            
+            // Simula o envio do formulário e exibe uma mensagem
+            messageBox.innerHTML = ''; // Limpa mensagens anteriores
+            const successMessage = document.createElement('div');
+            successMessage.className = 'form-message form-success';
+            successMessage.textContent = 'Mensagem enviada com sucesso! Em breve entraremos em contato.';
+            messageBox.appendChild(successMessage);
+            
+            form.reset(); // Limpa o formulário
+        });
+    </script>
+</body>
+</html>
